@@ -1,0 +1,21 @@
+# overlays/prod/prod-patch.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+
+  name: my-app
+
+spec:
+  replicas: 10
+
+  template:
+    metadata:
+      labels:
+        environment: prod
+
+    spec:
+      serviceAccountName: my-app-prod
+
+      containers:
+        - name: my-app
+          image: my-app:v2.5.0
