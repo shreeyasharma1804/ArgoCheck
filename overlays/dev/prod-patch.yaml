@@ -14,7 +14,6 @@ spec:
         environment: prod
 
     spec:
-      serviceAccountName: my-app-prod
 
       containers:
         - name: my-app
