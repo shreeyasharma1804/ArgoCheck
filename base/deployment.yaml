@@ -15,7 +15,6 @@ spec:
       labels:
         app: my-app
     spec:
-      serviceAccountName: my-app
       containers:
         - name: my-app
           image: my-app:v1.0.0
